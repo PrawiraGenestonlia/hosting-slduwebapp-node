@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "git-sc":"git add . && git commit -am \".\" && git push origin master"
+    "git-sc": "git add . && git commit -am \".\" && git push origin master"
   },
   "dependencies": {
+    "basic-auth": "^2.0.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-basic-auth": "^1.2.0",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1"
