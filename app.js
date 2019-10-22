@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const auth = require('basic-auth');
 const path = require('path');
 const app = express();
 app.disable('x-powered-by');
 
-const admins = { sldu: { password: 'sldus2b2a39' } };
+const admins = { sldu: { password: process.env.PASSWORD } };
 function authorization(request, response, next) {
   var user = auth(request);
   if (!user || !admins[user.name] || admins[user.name].password !== user.pass) {
